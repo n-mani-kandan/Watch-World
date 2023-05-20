@@ -1,0 +1,3 @@
+com\ivanfranchin\bookapi\rest\dto\UserDto.class
+com\ivanfranchin\bookapi\exception\BookNotFoundException.class
+com\ivanfranchin\bookapi\rest\dto\AuthResponse.class
