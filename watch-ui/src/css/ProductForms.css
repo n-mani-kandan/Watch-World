@@ -1,0 +1,22 @@
+.forms{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    /* box-sizing: border-box; */
+}
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.editbutton{
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 40px;
+    height: 30px;
+    color:white;
+    background-color: rgb(19, 126, 232);
+    border: none;
+}

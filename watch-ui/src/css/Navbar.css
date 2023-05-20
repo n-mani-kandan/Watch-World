@@ -1,0 +1,60 @@
+.content{
+    font-weight: 800;
+    font-family:sans-serif;
+}
+
+
+.header{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    background-color: white;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: black;
+}
+
+.fruit_basket{
+    text-decoration: none;
+    margin-left: 80px;
+    font-size: 50px;
+    font-weight: 700;
+    color: green;
+}
+
+.fruit_basket:hover{
+    text-decoration: none;
+    color: green;
+}
+
+
+
+
+.slign{
+    font-size: 20px;
+}
+
+.fruit{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.fruit:hover{
+    color:black;
+}
+
+
+.slign{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-left: 750px;
+}
