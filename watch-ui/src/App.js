@@ -1,38 +1,37 @@
- import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { AuthProvider } from './components/context/AuthContext'
-import PrivateRoute from './components/misc/PrivateRoute'
-import Navbar from './components/misc/Navbar'
-import Home from './components/home/Home'
-import Login from './components/home/Login'
-import Signup from './components/home/Signup'
-import AdminPage from './components/admin/AdminPage'
-import UserPage from './components/user/UserPage'
-import Products from './components/home/Products'
-import ProductPage from './components/user/ProductPage'
-import UpdateProduct from './components/home/UpdateProduct'
-import Cart from './components/user/Cart'
+import React, { Fragment, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import FootImages from "./components/FootImages";
+import CarouselImages from "./components/CarouselImages";
+import Navibar from "./components/Navibar";
+import Home from "./components/Home";
+import Products from "./components/Products";
+import Login from "./components/Login";
+import Cart from "./components/Cart";
+import Payment from "./components/Payment";
+import Signup from "./components/Signup";
 
-function App() {
+const App = () => {
   return (
-    <AuthProvider>
+    <Fragment >
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/product' element={<Products />} />
-          <Route path='/productpage' element={<ProductPage />} />
-          <Route path='/updateproduct' element={<UpdateProduct />} />
-          <Route path="/adminpage" element={<PrivateRoute><AdminPage /></PrivateRoute>}/>
-          <Route path="/userpage" element={<PrivateRoute><UserPage /></PrivateRoute>}/>
-          <Route path="*" element={<Navigate to="/" />}/>
-        </Routes>
-      </Router>
-    </AuthProvider>
-  )
-}
+        <Navibar />
+         <Routes>
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/footimages" element={<FootImages />} ></Route>
+          <Route path="/CarouselImages" element={<CarouselImages />} ></Route>
+          <Route path="/navibar" element={<Navibar />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/" element={<Login />} ></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/payment" element={<Payment />} ></Route>
+          <Route path="/signup" element={<Signup />} ></Route>
+         </Routes>
+       </Router>
+    </Fragment>
+  );
+};
 
-export default App
+export default App;

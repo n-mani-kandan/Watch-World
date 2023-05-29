@@ -1,8 +1,9 @@
-.cards{
+ .cards{
     width: 250px;
     padding: 20px;
     margin-top: 30px;
-    justify-content: space-between;
+    margin-left: 100px;
+  
 }
 
 
@@ -35,8 +36,7 @@
     padding: 5px 10px;
     border: none;
     font-weight: bold;
-    background-color:
-                       skyblue;
+    background-color:skyblue;
     outline: none;
     border-radius: 2px;
 }
@@ -51,7 +51,22 @@ section{
 }
 
 .items{
+    
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
 }
+
+.searchbox{
+    margin-top: 100px;
+}
+
+.searchboxb{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
