@@ -1,4 +1,7 @@
 package com.fsd.productservice.service.impl;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.fsd.productservice.entity.Product;
@@ -23,4 +26,10 @@ public class ProductServiceImpl implements ProductService{
 		 return productRepository.findById(productId).get();
 	}
 
+	@Override
+	public List<Product> getAllProduct() {
+		List<Product> products = new ArrayList<Product>();
+		productRepository.findAll().forEach(products1 -> products.add(products1));
+		return products;
+	}
 }

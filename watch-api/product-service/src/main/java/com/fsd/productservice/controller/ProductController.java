@@ -1,4 +1,8 @@
 package com.fsd.productservice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
 import org.springframework.http.ResponseEntity;
@@ -13,15 +17,21 @@ import lombok.AllArgsConstructor;
 @RequestMapping("api/products")
 @AllArgsConstructor
 public class ProductController {
-
+	@Autowired
 	private ProductService productService;
-
+	
+	@CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public ResponseEntity<Product> saveProduct(@RequestBody Product product){
         Product savedProduct = productService.saveProduct(product);
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
-
+	@CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("")
+    public List<Product> getallProducta(){
+    	return productService.getAllProduct();
+    }
+	@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") Long productId){
         Product product = productService.getProductById(productId);

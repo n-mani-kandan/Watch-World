@@ -1,17 +1,21 @@
 package com.fsd.userservice.service.impl;
 import org.springframework.web.client.RestTemplate;
 
+
 import com.fsd.userservice.dto.*;
 import com.fsd.userservice.entity.User;
 import com.fsd.userservice.repository.*;
 import com.fsd.userservice.service.*;
 
 import lombok.AllArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
-
 public class UserServiceImpl implements UserService {
 
 	 private UserRepository userRepository;
@@ -19,6 +23,12 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User saveUser(User user) {
 		return userRepository.save(user);
+	}
+	
+	public List<User> getAllUsers() {
+		List<User> products = new ArrayList<User>();
+		userRepository.findAll().forEach(products1 -> products.add(products1));
+		return products;
 	}
 
 	@Override
@@ -52,5 +62,7 @@ public class UserServiceImpl implements UserService {
         userDto.setEmail(user.getEmail());
         return userDto;
     }
+
+	
 
 }
