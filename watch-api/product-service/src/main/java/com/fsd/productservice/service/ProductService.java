@@ -7,8 +7,18 @@ import com.fsd.productservice.entity.*;
 public interface ProductService {
     Product saveProduct(Product product);
 
-    Product getProductById(Long productId);
+  
     
  
-	List<Product> getAllProduct();
+	
+
+	List<Product> getAllProducts();
+
+	Product updateProduct(Long productId, Product product);
+
+	boolean deleteProduct(Long productId);
+
+	Product getProductById(int i);
+
+
 }
