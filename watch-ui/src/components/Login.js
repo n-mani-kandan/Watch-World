@@ -93,13 +93,13 @@ const Login = () => {
       <form onSubmit={handleLogin} className="login-form">
         <h1 className="heading">Watch World</h1>
         <h2 className="sub-heading">Welcome Back</h2>
-        <p className="description">Sign in with your email address or mobile number.</p>
+        <p className="description">Sign in with your email address .</p>
 
         <div className="form-group">
           <input
             type="text"
             className="form-control"
-            placeholder="Email or mobile number"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -122,7 +122,7 @@ const Login = () => {
         </div>
 
         <p className="signup-link">
-          New to Fruit Basket? <Link to="/signup">Sign Up</Link>
+          New to Watch World? <Link to="/signup">Sign Up</Link>
         </p>
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}

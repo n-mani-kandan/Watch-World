@@ -41,7 +41,7 @@ const Navibar = ({ size, setShow }) => {
                 </Link>
                               </a>
               <a className="nav-item nav-link content active" href="#">
-              <Link to="#" className="link">Help</Link>
+              <Link to="/admin" className="link">Admin</Link>
               </a>
               <Link to="/" className="link">
               <a className="nav-item nav-link content active" href="#">

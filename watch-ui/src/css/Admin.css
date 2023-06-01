@@ -1,0 +1,74 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .admin-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .admin-input,
+  .admin-textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .admin-textarea {
+    height: 120px;
+  }
+  
+  .admin-submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-submit:hover {
+    background-color: #45a049;
+  }
+  
+  .admin-response {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eaf5ea;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .admin-response a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .admin-response a:hover {
+    text-decoration: underline;
+  }
+
+
+  
