@@ -51,6 +51,29 @@ public class UserServiceImpl implements UserService {
 
         return responseDto;
 	}
+	
+	
+	@Override
+	public void deleteUser(Long userId) {
+	    userRepository.deleteById(userId);
+	}
+
+	@Override
+	public User updateUser(Long userId, User user) {
+	    User existingUser = userRepository.findById(userId)
+	            .orElseThrow(() -> new IllegalArgumentException("Invalid user ID: " + userId));
+
+	    existingUser.setName(user.getName());
+	    existingUser.setEmail(user.getEmail());
+	    existingUser.setUsername(user.getUsername());
+	    existingUser.setPassword(user.getPassword());
+	    existingUser.setRole(user.getRole());
+	    existingUser.setProductId(user.getProductId());
+
+	    return userRepository.save(existingUser);
+	}
+
+	
 	private UserDto mapToUser(User user){
         UserDto userDto = new UserDto();
         userDto.setId(user.getId());

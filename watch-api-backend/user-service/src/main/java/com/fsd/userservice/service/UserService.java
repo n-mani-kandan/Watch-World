@@ -9,4 +9,7 @@ public interface UserService {
     ResponseDto getUser(Long userId);
     
     List<User> getAllUsers();
+    void deleteUser(Long userId);
+    User updateUser(Long userId, User user);
+
 }
